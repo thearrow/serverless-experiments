@@ -4,10 +4,7 @@
 Vagrant.configure("2") do |config|
   config.vm.box = "ubuntu/xenial64"
 
-  # config.vm.network "forwarded_port", guest: 80, host: 8080
-
-  # Create a private network, which allows host-only access to the machine
-  # using a specific IP.
+  config.vm.network "forwarded_port", guest: 3000, host: 3000
   # config.vm.network "private_network", ip: "192.168.33.10"
 
   config.vm.synced_folder ".", "/vagrant"
